@@ -4,6 +4,8 @@
 
 ## This function takes a matrix, x, as an argument and returns a list
 ## containing functions that can cache the inverse of the matrix 
+## Setsolve assigns solution of the matrix to a variable in the
+## parent environment
 
 makeCacheMatrix <- function(x = matrix()) {
         s <- NULL

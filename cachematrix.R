@@ -1,4 +1,4 @@
-## These two functions retrieve the inverse of a matrix
+## These two functions attempt to retrieve the inverse of a matrix
 ## from a cache, and calculate the inverse of a matrix
 ## if it does not already exist in the cache
 
@@ -29,10 +29,15 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## This function takes a special matrix, x, as an argument
-## and returns the inverse of the matrix the function first 
-## checks to see if an inverse already exists. if it does, 
-## it ## returns the cached inverse.  If not, it calculates 
-## the inverse and returns the inverse
+## and returns the inverse of the matrix. First it
+## checks to see if an inverse already exists, by calling
+## one of the functions (getsolve) created in the other function.
+## If an inverse is found, this function returns that inverse.
+## If an inverse is not found, this function calculates
+## the inverse (s), and stores the inverse in the cache
+## for future use, by calling another function (setsolve)
+## created in the other function.  Finally the function
+## returns the inverse matrix 
 
 cacheSolve <- function(x, ...) {
         s <- x$getsolve()
